@@ -11,7 +11,7 @@ def GCD(a: Int, b: Int): Int = b match {
 @tailrec
 def prime(a: Int, b: Int=2): Boolean = b match {
   case x if x == a => true
-  case x if GCD(a, x) > 1 => false
+  case x if (GCD(a, x) > 1) || (a == 1) => false
   case x => prime(a, x+1)
 }
 
