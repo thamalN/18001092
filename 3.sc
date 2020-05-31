@@ -4,7 +4,7 @@ import scala.annotation.tailrec
 @tailrec
 def GCD(a: Int, b: Int): Int = b match {
   case 0 => a
-  case x if b > x => GCD(x, a)
+  case x if x > a => GCD(x, a)
   case x => GCD(x, a%x)
 }
 
